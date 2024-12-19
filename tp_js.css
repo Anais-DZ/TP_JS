@@ -1,0 +1,19 @@
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.personnage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#visage {
+    position: relative;
+    z-index: -1;
+}
+
+#cheveux_noirs_courts {
+    position: absolute;
+}
