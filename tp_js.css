@@ -1,9 +1,10 @@
 .container {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 20% 30% 30% 20%;
 }
 
 .personnage {
+    grid-column: 2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,4 +17,43 @@
 
 #cheveux_noirs_courts {
     position: absolute;
+}
+
+.gris {
+    background-color: #403c3c;
+}
+
+.jaune {
+    background-color: #ffb434;
+}
+
+.bleu {
+    background-color: #08a49c;
+}
+
+.bleu, .jaune, .gris {
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+}
+
+.couleur {
+    grid-column: 3;
+    display : flex;
+    flex-direction: column;
+}
+
+.container_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+h1 {
+    text-align: center;
+}
+
+#fleche_gauche, #fleche_droite {
+    cursor: pointer;
+    margin: 0 20px;
 }
