@@ -15,23 +15,23 @@
     z-index: -1;
 }
 
-#cheveux_noirs_courts {
+#coupe_1 {
     position: absolute;
 }
 
-.gris {
+#gris {
     background-color: #403c3c;
 }
 
-.jaune {
+#jaune {
     background-color: #ffb434;
 }
 
-.bleu {
+#bleu {
     background-color: #08a49c;
 }
 
-.bleu, .jaune, .gris {
+#bleu, #jaune, #gris {
     height: 60px;
     width: 60px;
     cursor: pointer;
