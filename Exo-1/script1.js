@@ -122,54 +122,81 @@
 
 //! EXO 20.1 
 //TODO: via JS afficher le profil  utilisateur dans la page web
-const userData2 = {
-    name: 'John delavega',
-    email: 'john.doe@example.com',
-    age: 25,
-    dob: '08/02/1989',
-    active: true,
-    img:'https://www.boredpanda.com/blog/wp-content/uploads/2022/06/funny-low-cost-cosplay-pics-62a744d39c80a__700.jpg'
-};
+// const userData2 = {
+//     name: 'John delavega',
+//     email: 'john.doe@example.com',
+//     age: 25,
+//     dob: '08/02/1989',
+//     active: true,
+//     img:'https://www.boredpanda.com/blog/wp-content/uploads/2022/06/funny-low-cost-cosplay-pics-62a744d39c80a__700.jpg'
+// };
 
-const image = document.createElement("img");
-image.src = "https://www.boredpanda.com/blog/wp-content/uploads/2022/06/funny-low-cost-cosplay-pics-62a744d39c80a__700.jpg";
-image.style.height = '350px';
-image.style.width = '280px';
-document.querySelector("div").appendChild(image);
+// const image = document.createElement("img");
+// image.src = "https://www.boredpanda.com/blog/wp-content/uploads/2022/06/funny-low-cost-cosplay-pics-62a744d39c80a__700.jpg";
+// image.style.height = '350px';
+// image.style.width = '280px';
+// document.querySelector("div").appendChild(image);
 
-const nom = document.createElement("h1");
-nom.innerText = "John delavega";
-nom.style.color = "white";
-nom.style.fontSize = "22px";
-document.querySelector("div").appendChild(nom);
+// const nom = document.createElement("h1");
+// nom.innerText = "John delavega";
+// nom.style.fontSize = "22px";
+// document.querySelector("div").appendChild(nom);
 
-const email = document.createElement("p");
-email.innerText = "john.doe@example.com";
-email.style.color = "white";
-email.style.fontSize = "18px";
-document.querySelector("div").appendChild(email);
+// const email = document.createElement("p");
+// email.innerText = "john.doe@example.com";
+// email.style.fontSize = "18px";
+// document.querySelector("div").appendChild(email);
 
-const age = document.createElement("p");
-age.innerText = "25";
-age.style.color = "white";
-age.style.fontSize = "18px";
-document.querySelector("div").appendChild(age);
+// const age = document.createElement("p");
+// age.innerText = "25";
+// age.style.fontSize = "18px";
+// document.querySelector("div").appendChild(age);
 
-const dob = document.createElement("p");
-dob.innerText = "08/02/1989";
-dob.style.color = "white";
-dob.style.fontSize = "18px";
-document.querySelector("div").appendChild(dob);
+// const dob = document.createElement("p");
+// dob.innerText = "08/02/1989";
+// dob.style.fontSize = "18px";
+// document.querySelector("div").appendChild(dob);
 
-const active = document.createElement("p");
-active.innerText = "true";
-active.style.color = "white";
-active.style.fontSize = "22px";
-document.querySelector("div").appendChild(active);
+// const active = document.createElement("p");
+// active.innerText = "true";
+// active.style.fontSize = "22px";
+// document.querySelector("div").appendChild(active);
+
+// const background = document.querySelector("div");
+// background.style.backgroundColor = '#4158D0';
+// background.style.backgroundImage = 'linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)';
+// background.style.height = "auto";
+// background.style.width = "38%";
+// background.style.margin = "auto";
+// background.style.padding = "30px";
+// background.style.color = "white";
+
 
 const background = document.querySelector("div");
-background.style.backgroundColor = '#4158D0';
-background.style.backgroundImage = 'linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)';
-background.style.height = "auto";
-background.style.width = "38%";
-background.style.padding = "30px"
+
+const title = document.createElement("h1");
+title.innerText = "D.O.M Events";
+title.style.cursor = "pointer";
+background.append(title);
+
+let selecTitle = false; //un bouléen pour savoir si le titre a été cliqué
+
+title.addEventListener("click", () => {
+    title.innerText = selecTitle==true  ? "-- 🥳 --":"D.O.M Events"; 
+    selecTitle = !selecTitle; // veut dire selectitle égale à son inverse
+});
+
+
+const input = document.createElement("input");
+background.append(input);
+
+input.addEventListener("focus", () => {
+    input.style.backgroundColor = "blue";
+    input.style.color = "white";
+    input.value = ''; // note perso : à mettre dans le code fil rouge --> efface l'input
+});
+
+input.addEventListener("blur", () => {
+    input.style.backgroundColor = "white";
+    input.style.color = "black";
+});
