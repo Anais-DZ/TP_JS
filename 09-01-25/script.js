@@ -189,7 +189,9 @@ const contactApi4 = async () => {
 contactApi4();
 
 
-//solution formateur
+
+// solution formateur
+
 // let divPokemonUI = document.querySelector("#superPokemonList");
 
 // const fetchPokemonGen9 = async () => {
